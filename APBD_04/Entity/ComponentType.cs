@@ -7,14 +7,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class ComponentType
 {
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public int Id { get; set; }
-    
+
     [Required]
     [MaxLength(30)]
-    public string Abbreviation  { get; set; } = null!;
+    public string Abbreviation { get; set; } = null!;
 
     [Required]
     [MaxLength(150)]
     public string Name { get; set; } = null!;
+
+    public ICollection<Component> Components { get; set; } = new List<Component>();
 }

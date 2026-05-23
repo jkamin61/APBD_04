@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 [Table("PCs")]
-public class PC
+public class Pc
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
